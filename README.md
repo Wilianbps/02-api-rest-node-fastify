@@ -1,4 +1,4 @@
-# Aplicação de Transações Financeiras
+# 💰 Aplicação de Transações Financeiras
 
 Esta é uma API simples construída com Node.js que permite criar, listar e consultar transações bancárias de usuários, além de exibir um resumo com o saldo total da conta.
 
@@ -47,4 +47,9 @@ Retorna um resumo com o saldo total da conta considerando todos os créditos e d
 - Fastify
 - Knex
 - Sqlite/PostgreSQL
+- vitest
+
+ ### ✅ Como rodar os testes
+ - npm run test
+
 
