@@ -1,12 +1,50 @@
-1. **Requisitos Funcionais**
-   [X] O usuário deve poder criar uma nova transação
-   [ ] O usuário deve poder obter um resumo da sua conta
-   [X] O usuário deve poder listar todas as transações que já ocorreram
-   [X] O usuário deve poder visualizar uma transação única
-   
-2. **Regra de Negócio**
-   [X] A transação pode ser do tipo crédito que somará ao valor total, ou débito que irá subtrair
-   [ ] Deve ser possível identificarmos o usuário entre as requisições
-   [ ] O usuário só pode visualizar transações o qual ele criou
+# Aplicação de Transações Financeiras
 
-3. **Requisitos não Funcionais - Quais estratégias e tecnologias**
+Esta é uma API simples construída com Node.js que permite criar, listar e consultar transações bancárias de usuários, além de exibir um resumo com o saldo total da conta.
+
+🚀 Funcionalidades
+- Criar uma nova transação (POST /transactions)
+- Listar todas as transações (GET /transactions)
+- Consultar uma transação por ID (GET /transactions/:id)
+- Obter o resumo (saldo total) da conta (GET /transactions/summary)
+
+📦 Instalação
+- git clone https://github.com/Wilianbps/02-api-rest-node-fastify.git
+- cd 02-api-rest-node-fastify
+- npm install
+
+▶️ Executando a aplicação
+- npm run dev
+
+📘 Endpoints
+## POST /transactions
+Cria uma nova transação.
+
+## Corpo da requisição:
+
+{
+  "title": "Salário",
+  "amount": 2500,
+  "type": "credit"
+}
+
+### GET /transactions
+Retorna a lista de todas as transações cadastradas.
+
+### GET /transactions/:id
+Busca uma transação específica pelo seu ID.
+
+### GET /transactions/summary
+Retorna um resumo com o saldo total da conta considerando todos os créditos e débitos.
+
+### Tipos possíveis:
+
+- credit: adiciona ao saldo
+- debit: subtrai do saldo
+
+### 🛠️ Tecnologias utilizadas
+- Node.js
+- Fastify
+- Knex
+- Sqlite/PostgreSQL
+
